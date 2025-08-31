@@ -16,25 +16,27 @@
        STICKY HEADER + GLOBAL NAVIGATION
        - Brand, primary section links, persistent access
        ===================================================== -->
-  <header>
-    <nav class="nav">
-      <!-- BRAND: LOGO + TITLE -->
-      <div class="brand">
-        <img src="logo sy.png" alt="logo" class="logo">
-        <h1>Cyber Security</h1>
-      </div>
+<header>
+  <nav class="nav">
+    <div class="brand">
+      <img src="logo sy.png" alt="logo" class="logo">
+      <h1>Cyber Security</h1>
+    </div>
 
-      <!-- PRIMARY NAV LINKS -->
-      <div class="links">
-        <a href="#about">About</a>
-        <a href="#threats">Threats</a>
-        <a href="#prevention">Prevention</a>
-        <a href="#csf">NIST CSF</a>
-        <a href="#checklist">Checklist</a>
-        <a href="#faq">FAQ</a>
-      </div>
-    </nav>
-  </header>
+    <!-- Hamburger button (hidden on desktop, visible on mobile) -->
+    <button class="menu-toggle" aria-label="Toggle menu">☰</button>
+
+    <!-- Nav links -->
+    <div class="links">
+      <a href="#about">About</a>
+      <a href="#threats">Threats</a>
+      <a href="#prevention">Prevention</a>
+      <a href="#csf">NIST CSF</a>
+      <a href="#checklist">Checklist</a>
+      <a href="#faq">FAQ</a>
+    </div>
+  </nav>
+</header>
 
   <main class="wrap">
     <!-- =====================================================
@@ -256,7 +258,7 @@
          - Govern/Identify/Protect/Detect/Respond/Recover
          ===================================================== -->
     <section id="csf" class="panel">
-      <h3>NIST CSF: mapping your program</h3>
+      <h3>NIST CSF (National Institute of Standards and Technology Cybersecurity Framework). <br> Mapping your program.</h3>
       <p class="muted">Use the CSF functions to frame efforts and communicate with stakeholders; tailor categories and outcomes to your context.</p>
       <table class="table">
         <thead><tr><th>Function</th><th>Focus</th><th>Examples</th></tr></thead>
@@ -325,7 +327,7 @@
        - Closing note and ownership
        ===================================================== -->
   <footer class="wrap">
-    <p>Built for security awareness and program alignment. Customize for your environment.</p>
+    <p>Built for security awareness and program alignment.</p>
   </footer>
 
   <!-- =====================================================
@@ -342,5 +344,14 @@
       });
     });
   </script>
+  <script>
+  const toggleBtn = document.querySelector('.menu-toggle');
+  const navLinks = document.querySelector('.links');
+
+  toggleBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('show');
+  });
+</script>
+
 </body>
 </html>
